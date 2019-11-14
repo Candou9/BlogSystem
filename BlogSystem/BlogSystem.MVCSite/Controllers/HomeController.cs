@@ -1,6 +1,9 @@
-﻿using System;
+﻿using BlogSystem.BLL;
+using BlogSystem.MVCSite.Models.UserViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -26,11 +29,30 @@ namespace BlogSystem.MVCSite.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        [ValidateAntiForgeryToken]
         public ActionResult Register()
         {
-           
-
             return View();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Register(Models.UserViewModels.RegisterViewModel model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            IBLL.IUserManager userManager = new UserManager();
+            await userManager.Register(model.Email, model.Password);
+            return Content("注册成功");
+        }
+        public ActionResult Login()
+        {
+
+        }
+        public ActionResult Login(LoginViewModel model)
+        {
+            return View(model);
+        }
     }
-}
+} 
