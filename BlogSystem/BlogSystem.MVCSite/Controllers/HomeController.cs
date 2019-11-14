@@ -1,4 +1,5 @@
 ﻿using BlogSystem.BLL;
+using BlogSystem.MVCSite.Filters;
 using BlogSystem.MVCSite.Models.UserViewModels;
 using System;
 using System.Collections.Generic;
@@ -11,10 +12,12 @@ namespace BlogSystem.MVCSite.Controllers
 {
     public class HomeController : Controller
     {
+        [BlogSystemAuth]
         public ActionResult Index()
         {
             return View();
         }
+        [BlogSystemAuth]
 
         public ActionResult About()
         {
@@ -22,6 +25,7 @@ namespace BlogSystem.MVCSite.Controllers
 
             return View();
         }
+        [BlogSystemAuth]
 
         public ActionResult Contact()
         {
@@ -47,6 +51,7 @@ namespace BlogSystem.MVCSite.Controllers
             return Content("注册成功");
         }
         [HttpGet]
+        [AllowAnonymous]
         public ActionResult Login()
         {
             return View();
