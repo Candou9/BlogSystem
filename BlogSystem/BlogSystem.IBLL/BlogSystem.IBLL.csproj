@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{44ACE2EE-929D-4E1D-BDC1-8B453A5D71A3}</ProjectGuid>
+    <ProjectGuid>{92778C30-1C42-4A72-A7CB-8C3F0C11F218}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BlogSystem.IDAL</RootNamespace>
-    <AssemblyName>BlogSystem.IDAL</AssemblyName>
+    <RootNamespace>BlogSystem.IBLL</RootNamespace>
+    <AssemblyName>BlogSystem.IBLL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,14 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IBaseService.cs" />
-    <Compile Include="IUserService.cs" />
+    <Compile Include="IUserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BlogSystem.Models\BlogSystem.Models.csproj">
-      <Project>{078ef903-e50f-4cf3-bf2e-8561e0027c4c}</Project>
-      <Name>BlogSystem.Models</Name>
+    <ProjectReference Include="..\BlogSystem.DTO\BlogSystem.Dto.csproj">
+      <Project>{c3d02990-af9d-4dfb-869c-cf418a12e74a}</Project>
+      <Name>BlogSystem.Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BlogSystem.IDAL\BlogSystem.IDAL.csproj">
+      <Project>{44ace2ee-929d-4e1d-bdc1-8b453a5d71a3}</Project>
+      <Name>BlogSystem.IDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

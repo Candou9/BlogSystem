@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.IDAL
 {
-    public class Class1
+    public interface IUserService:IBaseService<Models.User>
     {
     }
 }
