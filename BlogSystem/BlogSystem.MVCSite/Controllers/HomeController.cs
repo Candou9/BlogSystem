@@ -46,12 +46,49 @@ namespace BlogSystem.MVCSite.Controllers
             await userManager.Register(model.Email, model.Password);
             return Content("注册成功");
         }
+        [HttpGet]
         public ActionResult Login()
         {
-
+            return View();
         }
-        public ActionResult Login(LoginViewModel model)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Login(LoginViewModel model)
         {
+            if (ModelState.IsValid)
+            {
+                IBLL.IUserManager userManager = new UserManager();
+                Guid userid;
+                if (userManager.Login(model.Email, model.LoginPwd, out userid))
+                {
+                    //跳转
+                    //判断是用session还是用cookie
+                    if (model.RememberMe)
+                    {
+                        Response.Cookies.Add(new HttpCookie("loginName")
+                        {
+                            Value = model.Email,
+                            Expires = DateTime.Now.AddDays(7)
+                        });
+                        Response.Cookies.Add(new HttpCookie("userId")
+                        {
+                            Value = userid.ToString(),
+                            Expires = DateTime.Now.AddDays(7)
+                        });
+                    }
+                    else
+                    {
+                        Session["loginName"] = model.Email;
+                        Session["userid"] = userid;
+                    }
+
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Your accounts or password is wrong");
+                }
+            }
             return View(model);
         }
     }
