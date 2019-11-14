@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.Models
 {
-    public class Class1
+    public class BaseEntity
     {
+        public Guid Id { get; set; } = Guid.NewGuid();
+        public DateTime CreateTime { get; set; } = DateTime.Now;
+        /// <summary>
+        /// fake delete
+        /// </summary>
+        public bool IsRemoved { get; set; }
     }
 }
