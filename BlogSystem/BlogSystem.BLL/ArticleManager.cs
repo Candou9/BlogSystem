@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogSystem.Dto
+namespace BlogSystem.BLL
 {
-    public class Class1
+    class ArticleManager
     {
     }
 }

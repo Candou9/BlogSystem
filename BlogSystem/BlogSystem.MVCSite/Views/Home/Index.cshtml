@@ -1,6 +1,6 @@
 ﻿@{
     ViewBag.Title = "Home Page";
-    var loginName = Session["loginName"==null?Request.Cookies["loginName"].Value:Session["loginName"].ToString()]
+    var loginName = Session["loginName" == null ? Request.Cookies["loginName"].Value : Session["loginName"].ToString()];
 }
 <h3>
     @loginName

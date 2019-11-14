@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogSystem.Dto
+namespace BlogSystem.IDAL
 {
-    public class Class1
+    public interface IArticleToCategory:IBaseService<Models.ArticleToCategory>
     {
+
     }
 }

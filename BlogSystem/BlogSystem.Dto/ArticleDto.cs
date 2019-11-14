@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.Dto
 {
-    public class Class1
+    class ArticleDto
     {
     }
 }
