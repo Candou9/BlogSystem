@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using BlogSystem.BLL;
 using BlogSystem.MVCSite.Filters;
 using BlogSystem.MVCSite.Models.ArticleViewModels;
-
+using MvcPager;
 
 namespace BlogSystem.MVCSite.Controllers
 {
