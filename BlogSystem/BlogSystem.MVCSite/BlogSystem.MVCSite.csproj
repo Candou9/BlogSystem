@@ -132,6 +132,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ArticleViewModels\ArticleViewModels.cs" />
     <Compile Include="Models\UserViewModels\LoginViewModel.cs" />
     <Compile Include="Models\UserViewModels\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -174,10 +175,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Article\ArticleDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Article\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -197,8 +198,8 @@
       <Project>{69f6f896-ea73-47c4-8d2c-b9a05691f40a}</Project>
       <Name>BlogSystem.BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BlogSystem.DTO\BlogSystem.Dto.csproj">
-      <Project>{c3d02990-af9d-4dfb-869c-cf418a12e74a}</Project>
+    <ProjectReference Include="..\BlogSystem.Dto\BlogSystem.Dto.csproj">
+      <Project>{B54C9544-52D5-4CED-998C-3E736E0ED53D}</Project>
       <Name>BlogSystem.Dto</Name>
     </ProjectReference>
     <ProjectReference Include="..\BlogSystem.IBLL\BlogSystem.IBLL.csproj">

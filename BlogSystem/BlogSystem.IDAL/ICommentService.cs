@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.IDAL
 {
-    class ICommentService
+    public interface ICommentService : IBaseService<Models.Comment>
     {
+
     }
 }

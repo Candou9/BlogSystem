@@ -46,8 +46,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BlogSystem.DTO\BlogSystem.Dto.csproj">
-      <Project>{c3d02990-af9d-4dfb-869c-cf418a12e74a}</Project>
+    <ProjectReference Include="..\BlogSystem.Dto\BlogSystem.Dto.csproj">
+      <Project>{b54c9544-52d5-4ced-998c-3e736e0ed53d}</Project>
       <Name>BlogSystem.Dto</Name>
     </ProjectReference>
     <ProjectReference Include="..\BlogSystem.IDAL\BlogSystem.IDAL.csproj">

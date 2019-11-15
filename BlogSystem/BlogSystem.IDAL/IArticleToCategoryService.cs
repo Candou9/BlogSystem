@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.IDAL
 {
-    class IArticleToCategoryService
+    public interface IArticleToCategoryService : IBaseService<Models.ArticleToCategory>
     {
     }
 }

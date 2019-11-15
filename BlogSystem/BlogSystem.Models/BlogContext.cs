@@ -28,7 +28,6 @@ namespace BlogSystem.Models
 
         public DbSet<Fans> Fans { get; set; }
 
-
     }
 
 }
